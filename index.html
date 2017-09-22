@@ -7,7 +7,7 @@
 				margin: 0;
 				padding: 0;
 			}
-			iframe {
+			#oofplayer, iframe {
 				position: fixed;
 				top: 0;
 				left: 0;
@@ -17,6 +17,15 @@
 		</style>
 	</head>
 	<body>
-		<iframe src="https://www.youtube.com/embed/videoseries?list=PLA6lPP0IeyL8wzHpq5ZmBHJICPVk9KyiT&autoplay=1&loop=1&modestbranding=1&showinfo=0" frameborder="0" allowfullscreen></iframe>
+		<div id="oofplayer"><h1>OOF PLAYER <sub>loading...</sub></h1><h3><a href="https://github.com/oooof/oooof.github.io">GitHub</a></h3></div>
 	</body>
+	<script>
+		var videoIds = ['PDvF-bQDXbg','9tCKGz2qzls','2sJ1AkgNL8E','xxemNbibSuQ','6atQeYQuvqI','Hic7kp2_QCo'];
+		window.onload = function () {
+			setTimeout(function () {
+				var rVideo = videoIds[Math.floor(Math.random() * videoIds.length)];
+				document.getElementById('oofplayer').innerHTML = '<iframe src="https://www.youtube.com/embed/'+rVideo+'?listType=playlist&list=PLA6lPP0IeyL8wzHpq5ZmBHJICPVk9KyiT&autoplay=1&loop=1&modestbranding=1&showinfo=0" frameborder="0" allowfullscreen></iframe>';
+			}, 1000);
+		};
+	</script>
 </html>
